@@ -1,0 +1,9 @@
+@import "tailwindcss";
+:root{--bg:#07080d;--card:#0f111a;--fg:#eceef6;--muted:#8b90a5;--line:#1e2233;--brand:#7c6cff;--brand2:#22d3ee}
+[data-theme=light]{--bg:#f6f7fb;--card:#fff;--fg:#12142a;--muted:#5d6280;--line:#e2e5f0}
+@theme inline{--color-bg:var(--bg);--color-card:var(--card);--color-fg:var(--fg);--color-muted:var(--muted);--color-line:var(--line);--color-brand:var(--brand);--color-brand2:var(--brand2)}
+body{background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.grad{background:linear-gradient(120deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{background:radial-gradient(60% 55% at 50% 0%,color-mix(in srgb,var(--brand) 25%,transparent),transparent)}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fade{animation:up .4s ease both}
